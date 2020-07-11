@@ -1,10 +1,10 @@
 import tkinter
 from tkinter.filedialog import askopenfilename
-
 import tabula
 
 
 def chooseFile():
+    print("Choose a PDF file..")
     # Open FileChooser
     tkinter.Tk().withdraw()
     filename = askopenfilename()
@@ -12,8 +12,10 @@ def chooseFile():
     # Path
     if filename == '':
         path = None
+        print("..")
     else:
         path = filename
+        print("Done!\n")
 
     return path
 
